@@ -14,89 +14,86 @@ const Configuration = {
     },
     DynamicData: 
     [
+        //{
+          //  key: 'Tree Preservation Orders',
+            //url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_merged&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            //layerOptions: {
+            //    onEachFeature: tpoPopup,
+            //    maxZoom: 2,
+            //    style: tpoStyle
+            //},
+            //displayOverlay: true,
+            //visibleByDefault: true
+        //},
+
+        //{
+            //key: 'TPO - Proposed',
+            //url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_proposed&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            //layerOptions: {
+            //    onEachFeature: tpoPopup,
+            //    maxZoom: 2,
+            //    style: proposedtpoStyle
+            //},
+            //displayOverlay: true,
+            //visibleByDefault: true
+        //},
+
+        //{
+            //key: 'TPO - Revoked',
+            //url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_revoked&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            //layerOptions: {
+            //    onEachFeature: tpoPopup,
+            //    maxZoom: 2,
+            //    style: revokedtpoStyle
+            //},
+            //displayOverlay: true,
+            //visibleByDefault: true
+        //},
+
+        //{
+        //    key: 'Conservation Areas',
+        //    url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:conservation_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+        //    layerOptions: {
+        //        onEachFeature: conservationPopup,
+        //        maxZoom: 2,
+        //        style: conservationStyle
+        //    },
+        //    displayOverlay: true,
+        //    visibleByDefault: true
+        //},
+        //{
+        //    key: 'Tree Planning App Last Month',
+        //    url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=tree_plan_apps_1month&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+        //    layerOptions: {
+        //        onEachFeature: planappPopup,
+        //        maxZoom: 2,
+        //        style: planappStyle
+        //    },
+        //    displayOverlay: true,
+        //    visibleByDefault: false
+        //},
+
         {
-            key: 'Tree Preservation Orders',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_merged&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            key: 'Green Belt',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:green_belt_os&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-                onEachFeature: tpoPopup,
                 maxZoom: 2,
-                style: tpoStyle
+                style: greenbeltStyle
             },
             displayOverlay: true,
             visibleByDefault: true
         },
-
+        
         {
-            key: 'TPO - Proposed',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_proposed&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            key: 'Flood Risk Zones',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=flooding:flood_zones&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-                onEachFeature: tpoPopup,
                 maxZoom: 2,
-                style: proposedtpoStyle
+                style: floodzonesStyle
             },
             displayOverlay: true,
             visibleByDefault: true
         },
-
-        {
-            key: 'TPO - Revoked',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_revoked&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                onEachFeature: tpoPopup,
-                maxZoom: 2,
-                style: revokedtpoStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: true
-        },
-
-        {
-            key: 'Conservation Areas',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:conservation_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                onEachFeature: conservationPopup,
-                maxZoom: 2,
-                style: conservationStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: true
-        },
-        {
-            key: 'Tree Planning App Last Month',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=tree_plan_apps_1month&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                onEachFeature: planappPopup,
-                maxZoom: 2,
-                style: planappStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: false
-        },
-
-        {
-            key: 'Tree Planning App Last Year',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tree_plan_apps_1year&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                onEachFeature: planappPopup,
-                maxZoom: 2,
-                style: planappStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: false
-        },
-
-        {
-            key: 'Tree Planning App Last 3 Years',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tree_plan_apps_3years&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                onEachFeature: planappPopup,
-                maxZoom: 2,
-                style: planappStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: false
-        },
-
         
         {
             key: 'os1250_line',

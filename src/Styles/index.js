@@ -19,25 +19,34 @@ const revokedtpoStyle = {
     fillColor: '#2e3330',
     fillOpacity: 0.7
 }
-const conservationStyle = {
-    color: '#FF0000',
-    weight: 1,
-    opacity: 0.2,
-    fillColor: '#FF0000',
-    fillOpacity: 0.2
+function getColor_floodzones(d) {
+switch  (d) {   case 'Zone2'    :
+                    return '#a6cee3'    ;
+                case 'Zone3'    :
+                    return '#1f78b4'    ;
+            }
 }
-const planappStyle = {
-    color: '#8856a7',
+function floodzonesStyle (feature) {
+return {
+    color: getColor_floodzones (feature.properties.type),
     weight: 1,
     opacity: 1,
-    fillColor: '#8856a7',
+    fillColor: getColor_floodzones (feature.properties.type),
     fillOpacity: 0.5
+    }
+}
+const greenbeltStyle = {
+    color: '#b2df8a',
+    weight: 2,
+    opacity: 0.25,
+    fillColor: '#b2df8a',
+    fillOpacity: 0.25
 }
 
 export {
 tpoStyle,
 proposedtpoStyle,
 revokedtpoStyle,
-conservationStyle,
-planappStyle
+floodzonesStyle,
+greenbeltStyle
 }
