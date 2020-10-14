@@ -3,8 +3,8 @@ import { delsitesStyle, devsitesStyle, notdevsitesStyle, permissionedsitesStyle,
 
 const Configuration = {
     Map: {
-        StartingLatLng: [53.404056,-2.154329],
-        StartingZoom: 17,
+        StartingLatLng: [53.391067,-2.1197936],
+        StartingZoom: 2,
         FullscreenControl: true,
         DisplayLayerControls: true,
         DisplayGrayScale: true,
@@ -61,17 +61,6 @@ const Configuration = {
         //    displayOverlay: true,
         //    visibleByDefault: true
         //},
-        //{
-        //    key: 'Tree Planning App Last Month',
-        //    url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=tree_plan_apps_1month&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-        //    layerOptions: {
-        //        onEachFeature: planappPopup,
-        //        maxZoom: 2,
-        //        style: planappStyle
-        //    },
-        //    displayOverlay: true,
-        //    visibleByDefault: false
-        //},
 
         {
             key: 'Green Belt',
@@ -94,7 +83,29 @@ const Configuration = {
             displayOverlay: true,
             visibleByDefault: true
         },
+
+        {
+            key: 'Town Centre Living Area',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:town_centre_living_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: tclaStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: true
+        },
         
+        {
+            key: 'Town Centre West Mayoral Development Corporation',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:town_centre_west_mdc&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: tcwmdcStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: true
+        },
+
         {
             key: 'os1250_line',
             url: 'http://spatial.stockport.gov.uk/geoserver/wms?',

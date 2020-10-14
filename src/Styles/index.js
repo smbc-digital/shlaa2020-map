@@ -5,25 +5,25 @@ const tpoStyle = {
     fillColor: '#00ff00',
     fillOpacity: 0.7
 }
-const proposedtpoStyle = {
-    color: '#f7ff05',
-    weight: 1,
+const tcwmdcStyle = {
+    color: '#fdb462',
+    weight: 2,
     opacity: 1,
-    fillColor: '#f7ff05',
-    fillOpacity: 0.7
+    fillColor: '#fdb462',
+    fillOpacity: 0
 }
-const revokedtpoStyle = {
-    color: '#2e3330',
-    weight: 1,
+const tclaStyle = {
+    color: '#bc80bd',
+    weight: 2,
     opacity: 1,
-    fillColor: '#2e3330',
-    fillOpacity: 0.7
+    fillColor: '#fccde5',
+    fillOpacity: 0.5
 }
 function getColor_floodzones(d) {
 switch  (d) {   case 'Zone2'    :
-                    return '#a6cee3'    ;
+                    return '#8dd3c7'    ;
                 case 'Zone3'    :
-                    return '#1f78b4'    ;
+                    return '#80b1d3'    ;
             }
 }
 function floodzonesStyle (feature) {
@@ -36,17 +36,17 @@ return {
     }
 }
 const greenbeltStyle = {
-    color: '#b2df8a',
+    color: '#b3de69',
     weight: 2,
     opacity: 0.25,
-    fillColor: '#b2df8a',
+    fillColor: '#b3de69',
     fillOpacity: 0.25
 }
 
 export {
 tpoStyle,
-proposedtpoStyle,
-revokedtpoStyle,
+tcwmdcStyle,
+tclaStyle,
 floodzonesStyle,
 greenbeltStyle
 }
