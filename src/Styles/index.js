@@ -21,9 +21,9 @@ const tclaStyle = {
 }
 function getColor_floodzones(d) {
 switch  (d) {   case 'Zone2'    :
-                    return '#8dd3c7'    ;
+                    return '#8dd3c7'    
                 case 'Zone3'    :
-                    return '#80b1d3'    ;
+                    return '#80b1d3'    
             }
 }
 function floodzonesStyle (feature) {

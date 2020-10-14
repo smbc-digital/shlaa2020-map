@@ -1,5 +1,5 @@
-import { delsitesPopup, devsitesPopup, notdevsitesPopup, permissionedsitesPopup } from './Popups'
-import { delsitesStyle, devsitesStyle, notdevsitesStyle, permissionedsitesStyle, tclaStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
+//import { delsitesPopup, devsitesPopup, notdevsitesPopup, permissionedsitesPopup } from './Popups'
+import { tclaStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
 
 const Configuration = {
     Map: {
