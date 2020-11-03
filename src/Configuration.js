@@ -1,4 +1,4 @@
-//import { delsitesPopup, devsitesPopup, notdevsitesPopup, permissionedsitesPopup } from './Popups'
+import { developablesitesPopup} from './Popups' //devsitesPopup, notdevsitesPopup, permissionedsitesPopup}
 import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
 
 const Configuration = {
@@ -88,8 +88,10 @@ const Configuration = {
             key: 'Test Map Book 3',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
+                onEachFeature: developablesitesPopup,
                 maxZoom: 2,
                 style: developablesitesStyle
+
             },
             displayOverlay: true,
             visibleByDefault: true

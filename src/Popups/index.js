@@ -1,12 +1,12 @@
-const tpoPopup = (feature, layer) => {
+const developablesitesPopup = (feature, layer) => {
   
   const content = `<div class="item"><i class="fa fa-tree" aria-hidden="true"></i><p class="title">Tree Preservation Order</p>
   <p></p>
-  <p class="info">Reference: ${feature.properties.tpo_number}</p>
-  <p class="info">Tree Number: ${feature.properties.tree_number}</p>
-  <p class="info">Name: ${feature.properties.tpo_name}</p>
-  <p class="info">Species: ${feature.properties.tree_species}</p>
-  <p class="info">Status: ${feature.properties.status}</p>
+  <p class="info">Site Address: ${feature.properties.site_address}</p>
+  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
+  <p class="info">Site Capacity: ${feature.properties.capacity}</p>
+  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
+  <p class="info">Assessment: ${feature.properties.assessment_text_2020}</p>
   
   </div>`
  
@@ -41,7 +41,7 @@ const tpoPopup = (feature, layer) => {
  }
 
 export {
-  tpoPopup,
+  developablesitesPopup,
   conservationPopup,
   planappPopup
 }
