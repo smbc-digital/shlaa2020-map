@@ -12,7 +12,7 @@ const tcwmdcStyle = {
     fillColor: '#fdb462',
     fillOpacity: 0
 }
-const tclaStyle = {
+const developablesitesStyle = { //This needs changing based on how the input of deliverable and non developable sites works out.
     color: '#bc80bd',
     weight: 2,
     opacity: 1,
@@ -46,7 +46,7 @@ const greenbeltStyle = {
 export {
 tpoStyle,
 tcwmdcStyle,
-tclaStyle,
+developablesitesStyle,
 floodzonesStyle,
 greenbeltStyle
 }

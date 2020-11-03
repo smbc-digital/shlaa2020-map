@@ -1,5 +1,5 @@
 //import { delsitesPopup, devsitesPopup, notdevsitesPopup, permissionedsitesPopup } from './Popups'
-import { tclaStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
+import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -85,11 +85,11 @@ const Configuration = {
         },
 
         {
-            key: 'Town Centre Living Area',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:town_centre_living_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            key: 'Test Map Book 3',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
-                style: tclaStyle
+                style: developablesitesStyle
             },
             displayOverlay: true,
             visibleByDefault: true
