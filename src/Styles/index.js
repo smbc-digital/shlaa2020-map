@@ -1,9 +1,9 @@
 const tpoStyle = {
-    color: '#00ff00',
+    color: '#e31a1c',
     weight: 1,
     opacity: 1,
-    fillColor: '#00ff00',
-    fillOpacity: 0.7
+    fillColor: '#fb9a99',
+    fillOpacity: 0
 }
 const tcwmdcStyle = {
     color: '#fdb462',

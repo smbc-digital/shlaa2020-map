@@ -1,5 +1,5 @@
 import { developablesitesPopup} from './Popups' //devsitesPopup, notdevsitesPopup, permissionedsitesPopup}
-import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle} from './Styles'
+import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, tpoStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -50,17 +50,17 @@ const Configuration = {
             //visibleByDefault: true
         //},
 
-        //{
-        //    key: 'Conservation Areas',
-        //    url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:conservation_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-        //    layerOptions: {
-        //        onEachFeature: conservationPopup,
-        //        maxZoom: 2,
-        //        style: conservationStyle
-        //    },
-        //    displayOverlay: true,
-        //    visibleByDefault: true
-        //},
+        {
+            key: 'All assessed sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_allsites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                //onEachFeature: conservationPopup,
+                maxZoom: 2,
+                style: tpoStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: true
+        },
 
         {
             key: 'Green Belt',
