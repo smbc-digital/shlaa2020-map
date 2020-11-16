@@ -1,5 +1,5 @@
-import { developablesitesPopup} from './Popups' //devsitesPopup, notdevsitesPopup, permissionedsitesPopup}
-import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, tpoStyle} from './Styles'
+import { developablesitesPopup, permissionedPopup} from './Popups' //devsitesPopup, notdevsitesPopup, permissionedsitesPopup}
+import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, tpoStyle, permissionedStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -33,18 +33,6 @@ const Configuration = {
             //    onEachFeature: tpoPopup,
             //    maxZoom: 2,
             //    style: proposedtpoStyle
-            //},
-            //displayOverlay: true,
-            //visibleByDefault: true
-        //},
-
-        //{
-            //key: 'TPO - Revoked',
-            //url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_revoked&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            //layerOptions: {
-            //    onEachFeature: tpoPopup,
-            //    maxZoom: 2,
-            //    style: revokedtpoStyle
             //},
             //displayOverlay: true,
             //visibleByDefault: true
@@ -85,7 +73,19 @@ const Configuration = {
         },
 
         {
-            key: 'Test Map Book 3',
+            key: 'Land Supply 2020 - Permissioned Sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:schema2020_resi_permissioned&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                onEachFeature: permissionedPopup,
+                maxZoom: 2,
+                style: permissionedStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: true
+        },
+
+        {
+            key: 'SHLAA 2020 - Deliverable and Developable Sites',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 onEachFeature: developablesitesPopup,

@@ -42,11 +42,19 @@ const greenbeltStyle = {
     fillColor: '#b3de69',
     fillOpacity: 0.25
 }
+const permissionedStyle = {
+    color: '#e31a1c',
+    weight: 2,
+    opacity: 0.25,
+    fillColor: '#fb9a99',
+    fillOpacity: 0.25
+}
 
 export {
 tpoStyle,
 tcwmdcStyle,
 developablesitesStyle,
 floodzonesStyle,
-greenbeltStyle
+greenbeltStyle,
+permissionedStyle
 }
