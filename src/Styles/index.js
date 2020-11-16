@@ -45,9 +45,9 @@ const greenbeltStyle = {
 const permissionedStyle = {
     color: '#e31a1c',
     weight: 2,
-    opacity: 0.25,
+    opacity: 1,
     fillColor: '#fb9a99',
-    fillOpacity: 0.25
+    fillOpacity: 0.5
 }
 
 export {

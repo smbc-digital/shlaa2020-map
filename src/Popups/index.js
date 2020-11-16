@@ -7,7 +7,6 @@ const developablesitesPopup = (feature, layer) => {
   <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
   <p class="info">Site Capacity: ${feature.properties.capacity}</p>
   <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
-  <p class="info">Assessment: ${feature.properties.assessment_text_2020}</p>
   
   </div>`
  

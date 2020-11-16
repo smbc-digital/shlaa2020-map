@@ -39,7 +39,7 @@ const Configuration = {
         //},
 
         {
-            key: 'All assessed sites',
+            key: 'All submitted sites',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_allsites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 //onEachFeature: conservationPopup,
