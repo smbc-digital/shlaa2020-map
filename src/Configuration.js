@@ -1,5 +1,5 @@
-import { developablesitesPopup, permissionedPopup} from './Popups' //devsitesPopup, notdevsitesPopup, permissionedsitesPopup}
-import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, tpoStyle, permissionedStyle} from './Styles'
+import { developablesitesPopup, permissionedPopup, notassessedPopup} from './Popups' //devsitesPopup, notdevsitesPopup}
+import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, allsubmittedStyle, permissionedStyle, notassessedStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -26,30 +26,6 @@ const Configuration = {
             //visibleByDefault: true
         //},
 
-        //{
-            //key: 'TPO - Proposed',
-            //url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=trees:tpo_proposed&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            //layerOptions: {
-            //    onEachFeature: tpoPopup,
-            //    maxZoom: 2,
-            //    style: proposedtpoStyle
-            //},
-            //displayOverlay: true,
-            //visibleByDefault: true
-        //},
-
-        {
-            key: 'All submitted sites',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_allsites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                //onEachFeature: conservationPopup,
-                maxZoom: 2,
-                style: tpoStyle
-            },
-            displayOverlay: true,
-            visibleByDefault: true
-        },
-
         {
             key: 'Green Belt',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:green_belt_os&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
@@ -70,6 +46,17 @@ const Configuration = {
             },
             displayOverlay: true,
             visibleByDefault: true
+        },
+
+        {
+            key: 'All submitted sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_allsites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: allsubmittedStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: false
         },
 
         {
@@ -106,6 +93,18 @@ const Configuration = {
             },
             displayOverlay: true,
             visibleByDefault: true
+        },
+
+        {
+            key: 'Submitted Sites - Not Assessed',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_not_assessed&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                onEachFeature: notassessedPopup,
+                maxZoom: 2,
+                style: notassessedStyle
+            },
+            displayOverlay: true,
+            visibleByDefault: false
         },
 
         {

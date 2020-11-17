@@ -1,8 +1,8 @@
-const tpoStyle = {
-    color: '#e31a1c',
-    weight: 1,
+const allsubmittedStyle = {
+    color: '#003c30',
+    weight: 2,
     opacity: 1,
-    fillColor: '#fb9a99',
+    fillColor: '#01665e',
     fillOpacity: 0
 }
 const tcwmdcStyle = {
@@ -49,12 +49,19 @@ const permissionedStyle = {
     fillColor: '#fb9a99',
     fillOpacity: 0.5
 }
-
+const notassessedStyle = {
+    color: '#081d58',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#253494',
+    fillOpacity: 0.5
+}
 export {
-tpoStyle,
+allsubmittedStyle,
 tcwmdcStyle,
 developablesitesStyle,
 floodzonesStyle,
 greenbeltStyle,
-permissionedStyle
+permissionedStyle,
+notassessedStyle
 }

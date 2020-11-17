@@ -38,8 +38,22 @@ const developablesitesPopup = (feature, layer) => {
   layer.bindPopup(content)
  }
 
+ const notassessedPopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Submitted Sites - Not Assessed</p>
+  <p></p>
+  <p class="info">Site Address: ${feature.properties.site_address}</p>
+  <p class="info">${feature.properties.website_map_text}</p>
+
+  
+  </div>`
+ 
+  layer.bindPopup(content)
+ }
+
 export {
   developablesitesPopup,
   conservationPopup,
-  permissionedPopup
+  permissionedPopup,
+  notassessedPopup
 }
