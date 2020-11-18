@@ -1,6 +1,21 @@
 const developablesitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">SHLAA 2020 Sites</p>
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Developable sites SHLAA 2020</p>
+  <p></p>
+  <p class="info">Site Address: ${feature.properties.site_address}</p>
+  <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
+  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
+  <p class="info">Site Capacity: ${feature.properties.capacity}</p>
+  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
+  
+  </div>`
+ 
+  layer.bindPopup(content)
+ }
+
+ const tclaPopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Town Centre Living Area</p>
   <p></p>
   <p class="info">Site Address: ${feature.properties.site_address}</p>
   <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
@@ -26,7 +41,7 @@ const developablesitesPopup = (feature, layer) => {
 
  const permissionedPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Residential Land Supply 2020 - Permissioned Sites</p>
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Sites with planning permission for housing</p>
   <p></p>
   <p class="info">Site Address: ${feature.properties.site_address}</p>
   <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
@@ -40,7 +55,7 @@ const developablesitesPopup = (feature, layer) => {
 
  const notassessedPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Submitted Sites - Not Assessed</p>
+  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Sites that did not pass first sift of SHLAA 2020</p>
   <p></p>
   <p class="info">Site Address: ${feature.properties.site_address}</p>
   <p class="info">${feature.properties.website_map_text}</p>
@@ -55,5 +70,6 @@ export {
   developablesitesPopup,
   conservationPopup,
   permissionedPopup,
-  notassessedPopup
+  notassessedPopup,
+  tclaPopup
 }
